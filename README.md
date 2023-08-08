@@ -10,7 +10,7 @@ Habit Tracker is a simple Python command-line application that helps you track y
 ## Installation
 
 1. Clone the repository:
-   $ git clone https://github.com/Rhhamma/IU_HabitTracker.git
+   $ git clone [https://github.com/Rhhamma/IU_HabitTracker.git](https://github.com/Rhhamma/IU_HabitTrackerApp.git)
    $ cd habit-tracker
 2. Install the required dependencies:
     $ pip install -r requirements.txt
