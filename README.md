@@ -2,20 +2,12 @@
 Habit Tracker is a simple Python command-line application that helps you track your habits and monitor your streaks. It allows you to create habits, mark them as completed, and provides information on the longest streak for individual habits as well as across all habits.
 
 ## Table of Contents
-
-- [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 
-## Installation
-
-1. Clone the repository:
-   $ git clone [https://github.com/Rhhamma/IU_HabitTracker.git](https://github.com/Rhhamma/IU_HabitTrackerApp.git)
-   $ cd habit-tracker
-2. Install the required dependencies:
-    $ pip install -r requirements.txt
-
 ## Usage
+After installing the dependencies, download the files from this repository (if not downloaded already) and store them in a separate folder. Open your command/terminal window and cd to your downloaded folder
+
 To start the Habit Tracker application, run the following command:
     $ python cli.py
     The application will present a menu with various options:
