@@ -4,6 +4,7 @@ Habit Tracker is a simple Python command-line application that helps you track y
 ## Table of Contents
 - [Usage](#usage)
 - [Features](#features)
+- Unit Tests
 
 ## Usage
 After installing the dependencies, download the files from this repository (if not downloaded already) and store them in a separate folder. Open your command/terminal window and cd to your downloaded folder
@@ -30,3 +31,13 @@ To start the Habit Tracker application, run the following command:
     -List habits based on their periodicity (daily or weekly).
     -Retrieve the longest streak for a specific habit.
     -Calculate and display the longest streak across all habits.
+
+
+## Unit Tests
+The habit_test.py file contains unit tests to assure the program functionality. You can run the tests using the following command:
+
+python -m unittest habit_test.py
+
+
+
+Enjoy tracking your habits with the Habit Tracker program!
