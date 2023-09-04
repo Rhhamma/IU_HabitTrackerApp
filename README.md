@@ -2,9 +2,26 @@
 Habit Tracker is a simple Python command-line application that helps you track your habits and monitor your streaks. It allows you to create habits, mark them as completed, and provides information on the longest streak for individual habits as well as across all habits.
 
 ## Table of Contents
+- Modules
 - [Usage](#usage)
 - [Features](#features)
 - Unit Tests
+
+  
+## Modules
+habit_tracker.py:  This module defines two classes: Habit and HabitTracker.
+The Habit class represents a habit with name, periodicity (daily or weekly), creation date, and completed dates.
+The HabitTracker class manages the list of habits, allowing you to add, delete and list the habits.
+
+analytics.py : contains the functions that provide the user interface for interacting with the Habit Tracker.
+Functions like create_habit, complete_task, delete_habit_menu, and others allow you to perform the actions you need from this App .
+
+habit_test.py : defines test cases for the Habit and HabitTracker classes.
+It ensures the functionality of habit creation, completion, deletion, and streak calculation is working as expected.
+
+cli.py : this module is the one that the user interract with.
+It initializes a HabitTracker instance, loads existing data from a JSON file, and provides a command-line menu for interacting with the Habit Tracker.
+Users can create habits, mark tasks as completed, delete habits, list all habits, list habits by periodicity, and get streak information.
 
 ## Usage
 After installing the dependencies, download the files from this repository (if not downloaded already) and store them in a separate folder. Open your command/terminal window and cd to your downloaded folder
