@@ -201,16 +201,25 @@ class HabitTracker:
         Args:
             filename (str): The name of the file to save to.
         """
+        daily_habits = []
+        weekly_habits = []
+
+        for habit in self.habits:
+            habit_data = {
+                "name": habit.name,
+                "created_date": habit.created_date.isoformat(),
+                "completed_dates": [date.isoformat() for date in habit.completed_dates]
+            }
+            if habit.periodicity == "daily":
+                daily_habits.append(habit_data)
+            elif habit.periodicity == "weekly":
+                weekly_habits.append(habit_data)
+
         data = {
-            "habits": [
-                {
-                    "name": habit.name,
-                    "periodicity": habit.periodicity,
-                    "created_date": habit.created_date.isoformat(),
-                    "completed_dates": [date.isoformat() for date in habit.completed_dates]
-                }
-                for habit in self.habits
-            ]
+            "habits": {
+                "daily": daily_habits,
+                "weekly": weekly_habits
+            }
         }
 
         with open(filename, "w") as file:
@@ -226,15 +235,17 @@ class HabitTracker:
         with open(filename, "r") as file:
             data = json.load(file)
 
-        self.habits = [
-            Habit(
-                name=habit_data["name"],
-                periodicity=habit_data["periodicity"],
-                created_date=datetime.fromisoformat(habit_data["created_date"]).date(),
-                completed_dates=[datetime.fromisoformat(date).date() for date in habit_data["completed_dates"]]
-            )
-            for habit_data in data["habits"]
-        ]
+        self.habits = []
+
+        for periodicity in data["habits"]:
+            for habit_data in data["habits"][periodicity]:
+                habit = Habit(
+                    name=habit_data["name"],
+                    periodicity=periodicity,
+                    created_date=datetime.fromisoformat(habit_data["created_date"]).date(),
+                    completed_dates=[datetime.fromisoformat(date).date() for date in habit_data["completed_dates"]]
+                )
+                self.habits.append(habit)
 
 
 # Check if the habit_data.json file exists
