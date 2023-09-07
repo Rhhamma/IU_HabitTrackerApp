@@ -1,0 +1,38 @@
+{
+    "habits": {
+        "daily": [
+            {
+                "name": "Brush Teeth",
+                "created_date": "2023-05-01",
+                "completed_dates": []
+            },
+            {
+                "name": "Exercise",
+                "created_date": "2023-05-01",
+                "completed_dates": []
+            },
+            {
+                "name": "Read",
+                "created_date": "2023-05-01",
+                "completed_dates": []
+            },
+            {
+                "name": "cook",
+                "created_date": "2023-09-04",
+                "completed_dates": []
+            }
+        ],
+        "weekly": [
+            {
+                "name": "Clean Room",
+                "created_date": "2023-05-01",
+                "completed_dates": []
+            },
+            {
+                "name": "Cook",
+                "created_date": "2023-05-01",
+                "completed_dates": []
+            }
+        ]
+    }
+}
